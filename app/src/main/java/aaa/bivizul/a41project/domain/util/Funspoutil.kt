@@ -6,6 +6,8 @@ import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.AlertDialog
 import android.content.Context
+import android.content.res.Configuration
+import android.content.res.Resources
 import android.net.ConnectivityManager
 import android.telephony.TelephonyManager
 import com.onesignal.OneSignal
@@ -76,10 +78,20 @@ fun sigFunspooff() {
     OneSignal.disablePush(true)
 }
 
-//fun getFunspoact(funspoact: Activity, funspourl: String) {
-//    val activity = funspoact as Activity
-//    val funspoc = Class.forName(SPOHOWACTIVITY)
-//    val funspoi = Intent(activity, funspoc)
-//    val put = funspoi.putExtra(Funspocon.SPOHOWKOR, funspourl)
-//    activity.startActivity(put)
-//}
+fun getFunspofit(funspos: String): String {
+    val funspomin = funspos.indexOf("view_id=") + 8
+    val funspomax = funspos.indexOf("&stream")
+    return funspos.substring(funspomin, funspomax)
+}
+
+fun getFunspoScrOrnt(funspoornt: Resources): String {
+    val ornt = funspoornt.configuration.orientation
+    return if (ornt == Configuration.ORIENTATION_PORTRAIT) {
+        "http://65.109.10.118/41Project/v.jpg"
+    } else {
+        "http://65.109.10.118/41Project/h.jpg"
+    }
+}
+
+const val L = "view_id="
+const val G = "&stream"

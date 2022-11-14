@@ -9,7 +9,7 @@ import javax.inject.Inject
 
 class FunspoRepositoryImpl @Inject constructor(val funspoService: FunspoService):FunspoRepository {
 
-    override suspend fun getFunspo(funspo: Funspo) : Response<Funspog> {
+    override suspend fun getFunspog(funspo: Funspo) : Response<Funspog> {
         return funspoService.getFunspo(funspo = funspo)
     }
 

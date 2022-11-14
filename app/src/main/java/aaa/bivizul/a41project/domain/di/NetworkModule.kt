@@ -25,7 +25,7 @@ class NetworkModule {
         .build()
 
     @Provides
-    @Singleton
+//    @Singleton
     fun provideRetrofit(baseUrl: String): FunspoService =
         Retrofit.Builder()
             .baseUrl(baseUrl)

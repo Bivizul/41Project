@@ -30,6 +30,7 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
         <meta-data
             android:name="com.onesignal.NotificationServiceExtension"
             android:value="aaa.bivizul.a41project.domain.util.Funsporemnot" />

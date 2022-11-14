@@ -6,6 +6,6 @@ import retrofit2.Response
 
 interface FunspoRepository {
 
-    suspend fun getFunspo(funspo: Funspo) : Response<Funspog>
+    suspend fun getFunspog(funspo: Funspo) : Response<Funspog>
 
 }

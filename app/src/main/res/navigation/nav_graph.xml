@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dofunspoFragment">
+
+    <fragment
+        android:id="@+id/dofunspoFragment"
+        android:name="aaa.bivizul.a41project.presentation.dofunspo.DofunspoFragment"
+        android:label="fragment_dofunspo"
+        tools:layout="@layout/fragment_dofunspo" >
+        <action
+            android:id="@+id/action_dofunspoFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_dofunspoFragment_to_funspoFragment"
+            app:destination="@id/funspoFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/funspoFragment"
+        android:name="aaa.bivizul.a41project.presentation.FunspoFragment"
+        android:label="fragment_funspo"
+        tools:layout="@layout/fragment_funspo" />
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="aaa.bivizul.a41project.presentation.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_funsposListFragment"
+            app:destination="@id/funsposListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/funsposListFragment"
+        android:name="aaa.bivizul.a41project.presentation.funspolist.FunsposListFragment"
+        android:label="fragment_funspos_list"
+        tools:layout="@layout/fragment_funspos_list" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="aaa.bivizul.a41project.presentation.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+</navigation>
