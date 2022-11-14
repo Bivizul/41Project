@@ -13,6 +13,12 @@
         android:scaleType="centerCrop"
         tools:src="@tools:sample/backgrounds/scenic" />
 
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/backMainActivity2"
+        android:layout_width="match_parent"
+        android:background="@color/greyTr"
+        android:layout_height="match_parent"/>
+
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainer"
         android:name="androidx.navigation.fragment.NavHostFragment"

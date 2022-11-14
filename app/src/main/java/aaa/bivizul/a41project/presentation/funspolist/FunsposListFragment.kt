@@ -5,6 +5,7 @@ import aaa.bivizul.a41project.appComponent
 import aaa.bivizul.a41project.databinding.FragmentFunsposListBinding
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -30,6 +31,7 @@ class FunsposListFragment : Fragment(R.layout.fragment_funspos_list) {
         binding.funsposRV.adapter = funspoListAdapter
 
         viewModel.funspos.observe(viewLifecycleOwner){
+            Log.e("qwer","observe : $it")
             funspoListAdapter.submitList(it)
         }
     }
